@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reset 2026 | Carolina González</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@600;700&family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+
+  <!-- PayPal Hosted Buttons SDK -->
+  <script
+    src="https://www.paypal.com/sdk/js?client-id=BAADYIQ_NVIjwhk3nAtUTywZufmazNNlF6OaEzUd_ej9BIbFqGZZTGE0ilVI98qDlGt9O9eps1WSTe7g0s&components=hosted-buttons&disable-funding=venmo&currency=MXN">
+  </script>
+
+  <style>
+    :root{
+      --lavender:#BFAEC8;
+      --gold:#D4A373;
+      --charcoal:#2F2F2F;
+      --quartz:#F6F4F2;
+      --incense:#6A8199;
+      --card: rgba(106,129,153,0.08);
+      --softLav: rgba(191,174,200,0.12);
+    }
+    html,body{margin:0;padding:0;background:var(--quartz);color:var(--charcoal);}
+    body{font-family:"Lato",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.55;}
+    .container{max-width:1080px;margin:0 auto;padding:36px 18px 80px;}
+    .hero{
+      padding:34px 20px;border-radius:22px;
+      background:linear-gradient(180deg, rgba(191,174,200,0.10), rgba(246,244,242,0.0));
+      border:1px solid rgba(47,47,47,0.06);
+    }
+    .brandline{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline;}
+    .brand{font-family:"Cormorant Garamond",serif;font-weight:700;font-size:18px;letter-spacing:.3px;}
+    .sig{font-family:"Allura",cursive;font-size:26px;color:rgba(47,47,47,0.85);}
+    h1{font-family:"Cormorant Garamond",serif;font-weight:700;font-size:48px;line-height:1.05;margin:14px 0 12px;}
+    .sub{font-family:"Playfair Display",serif;font-style:italic;color:rgba(47,47,47,0.70);font-size:18px;margin:0 0 18px;}
+    .rule{height:2px;width:88px;background:var(--gold);border-radius:2px;margin:16px 0 18px;}
+    .chips{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 18px;}
+    .chip{font-size:13px;padding:8px 12px;border-radius:999px;background:var(--softLav);border:1px solid rgba(191,174,200,0.35);}
+    .ctaRow{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:18px;}
+    .btn{
+      appearance:none;border:none;cursor:pointer;
+      padding:14px 18px;border-radius:14px;
+      font-weight:700;letter-spacing:.2px;
+      display:inline-flex;align-items:center;justify-content:center;
+      text-decoration:none;user-select:none;
+    }
+    .btnPrimary{background:var(--gold);color:var(--charcoal);}
+    .btnSecondary{background:transparent;color:var(--charcoal);border:1px solid rgba(212,163,115,0.85);}
+    .btn:disabled{opacity:.6;cursor:not-allowed;}
+    .micro{font-size:12.5px;color:rgba(47,47,47,0.70);margin-top:10px;}
+    .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;margin-top:22px;}
+    @media (max-width:920px){.grid{grid-template-columns:1fr;}}
+    .section{margin-top:28px;padding:20px;border-radius:22px;background:#fff;border:1px solid rgba(47,47,47,0.06);}
+    .section.alt{background:var(--quartz);border:1px solid rgba(47,47,47,0.06);}
+    .section h2{font-family:"Cormorant Garamond",serif;font-weight:700;font-size:28px;margin:0 0 10px;}
+    .section h3{font-family:"Cormorant Garamond",serif;font-weight:700;font-size:20px;margin:18px 0 10px;}
+    .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:10px;}
+    @media (max-width:760px){.cards{grid-template-columns:1fr;}}
+    .card{border-radius:18px;background:var(--card);border:1px solid rgba(106,129,153,0.18);padding:14px;}
+    .cardTitle{font-weight:700;margin-bottom:6px;}
+    .quote{
+      margin-top:18px;padding:18px;border-radius:22px;
+      background:rgba(106,129,153,0.14);border:1px solid rgba(106,129,153,0.25);
+      font-family:"Playfair Display",serif;font-style:italic;font-size:18px;
+    }
+    form{display:grid;gap:10px;}
+    label{font-size:12px;color:rgba(47,47,47,0.70);}
+    input,select,textarea{
+      width:100%;border-radius:14px;border:1px solid rgba(47,47,47,0.14);
+      padding:12px;background:#fff;font-family:inherit;font-size:14.5px;outline:none;
+    }
+    textarea{min-height:92px;resize:vertical;}
+    .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+    @media (max-width:760px){.row2{grid-template-columns:1fr;}}
+    .notice{
+      margin-top:10px;font-size:13px;padding:12px;border-radius:14px;
+      background:rgba(191,174,200,0.12);border:1px solid rgba(191,174,200,0.35);
+    }
+    .ok{background:rgba(106,129,153,0.14);border-color:rgba(106,129,153,0.30);}
+    .err{background:rgba(212,163,115,0.14);border-color:rgba(212,163,115,0.35);}
+    .paypalBox{
+      border-radius:18px;padding:14px;background:rgba(106,129,153,0.10);
+      border:1px solid rgba(106,129,153,0.24);margin-top:12px;
+    }
+    ul{margin:10px 0 0 18px;}
+    li{margin:8px 0;}
+    .tiny{font-size:12px;color:rgba(47,47,47,0.68);}
+  </style>
+</head>
+
+<body>
+<div class="container">
+
+  <div class="hero">
+    <div class="brandline">
+      <div class="brand">Soultelling Studio</div>
+      <div class="sig">Carolina G.</div>
+    </div>
+
+    <h1>Reset 2026: Plan de 90 días + Acompañamiento 3 meses</h1>
+    <div class="rule"></div>
+    <p class="sub">Programa boutique presencial para mujeres emprendedoras (solo 3 lugares).</p>
+
+    <div class="chips">
+      <div class="chip">📍 Zapopan, Jalisco — zona Poniente (Av. Patria / Av. Guadalupe), cerca de Andares y La Estancia</div>
+      <div class="chip">🗓 Sábado 03 de enero de 2026</div>
+      <div class="chip">⏰ 10:00 a 14:00 (4 horas)</div>
+      <div class="chip">💳 $21,400 + IVA (facturado)</div>
+      <div class="chip">Total con IVA: $24,824</div>
+    </div>
+
+    <div class="ctaRow">
+      <a class="btn btnPrimary" href="#registro">Apartar mi lugar</a>
+      <a class="btn btnSecondary" href="#incluye">Ver qué incluye</a>
+    </div>
+
+    <div class="micro">
+      Facilitadora: <strong>Carolina González</strong> — claridad, estructura y ejecución con seguimiento real.
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="section">
+      <h2>Lo que esto resuelve</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="cardTitle">De ideas sueltas → prioridades claras</div>
+          Definimos 3 prioridades reales para enero–marzo y dejamos el resto fuera (sin culpa).
+        </div>
+        <div class="card">
+          <div class="cardTitle">De “plan bonito” → sistema ejecutable</div>
+          Metas, entregables y acciones semanales que sí caben en tu vida.
+        </div>
+        <div class="card">
+          <div class="cardTitle">De motivación → ritmo sostenido</div>
+          Seguimiento semanal (viernes) para ajustar sin perder el objetivo.
+        </div>
+        <div class="card">
+          <div class="cardTitle">De dispersión → decisiones</div>
+          Menos ruido. Más decisiones. Más resultados.
+        </div>
+      </div>
+      <div class="quote">“Un plan no cambia tu año. Un plan sostenido, sí.”</div>
+    </div>
+
+    <div class="section alt" id="registro">
+      <h2>Aparta tu lugar</h2>
+      <p class="tiny">
+        Apartas con <strong>50%</strong> vía PayPal y el resto en <strong>2</strong> mensualidades.
+      </p>
+
+      <div class="notice">
+        <strong>Anticipo (50% del total con IVA):</strong> $12,412<br>
+        <strong>Saldo restante:</strong> $12,412 en 2 mensualidades de <strong>$6,206</strong>
+      </div>
+
+      <!-- IMPORTANTE: pega tu URL /exec de Apps Script aquí -->
+      <script>
+        const APPS_SCRIPT_WEBAPP_URL = "PEGA_AQUI_TU_URL_DE_APPS_SCRIPT_EXEC";
+      </script>
+
+      <form id="leadForm" method="post" target="submitFrame">
+        <!-- backend usa este returnUrl para regresarte al dominio -->
+        <input type="hidden" name="returnUrl" id="returnUrl">
+        <!-- honeypot anti bots -->
+        <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;">
+
+        <div class="row2">
+          <div>
+            <label>Nombre completo</label>
+            <input name="fullName" required />
+          </div>
+          <div>
+            <label>WhatsApp</label>
+            <input name="whatsApp" required placeholder="+52..." />
+          </div>
+        </div>
+
+        <div class="row2">
+          <div>
+            <label>Email</label>
+            <input name="email" type="email" required />
+          </div>
+          <div>
+            <label>Instagram o nombre de negocio</label>
+            <input name="instagramOrBusiness" />
+          </div>
+        </div>
+
+        <div class="row2">
+          <div>
+            <label>Etapa</label>
+            <select name="stage" required>
+              <option value="">Selecciona…</option>
+              <option>Arranque</option>
+              <option>Ya vendo y quiero ordenar</option>
+              <option>Ya vendo y quiero crecer</option>
+            </select>
+          </div>
+          <div>
+            <label>¿Requieres factura?</label>
+            <select name="needsInvoice" id="needsInvoice" required>
+              <option value="">Selecciona…</option>
+              <option>Sí</option>
+              <option>No</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label>Tu reto principal para enero–marzo</label>
+          <textarea name="mainGoal" required placeholder="Ej: ordenar mi oferta, mejorar ventas, lanzar X, etc."></textarea>
+        </div>
+
+        <div id="invoiceFields" style="display:none;">
+          <h3>Datos de facturación</h3>
+          <div class="row2">
+            <div>
+              <label>RFC</label>
+              <input name="rfc" />
+            </div>
+            <div>
+              <label>Razón social</label>
+              <input name="razonSocial" />
+            </div>
+          </div>
+          <div class="row2">
+            <div>
+              <label>Uso de CFDI</label>
+              <input name="usoCfdi" placeholder="Ej: G03" />
+            </div>
+            <div>
+              <label>CP fiscal</label>
+              <input name="cpFiscal" />
+            </div>
+          </div>
+          <div class="tiny">Si no lo tienes a la mano, puedes enviarlo después por WhatsApp.</div>
+        </div>
+
+        <button class="btn btnPrimary" type="submit" id="submitBtn">Enviar registro</button>
+      </form>
+
+      <div id="msg" class="notice" style="display:none;"></div>
+
+      <!-- PayPal block -->
+      <div id="payBlock" class="paypalBox" style="display:none;">
+        <div style="font-weight:700; margin-bottom:6px;">Paso 2: Paga tu anticipo por PayPal</div>
+        <div style="margin-bottom:10px;">Anticipo: <strong>$12,412</strong></div>
+
+        <div id="paypal-container-C6XA5SYCVNL82" style="margin: 10px 0 12px;"></div>
+
+        <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+          <a class="btn btnPrimary" id="waLink" href="#" target="_blank" rel="noopener">Enviar comprobante por WhatsApp</a>
+          <a class="btn btnSecondary" href="https://paypal.me/CarolinaGonzalezMora?locale.x=en_US&country.x=MX" target="_blank" rel="noopener">
+            Si el botón no carga, pagar en PayPal.me
+          </a>
+        </div>
+
+        <div style="margin-top:10px; font-size:12.5px; color: rgba(47,47,47,0.70);">
+          Después de pagar, mándame el comprobante y te confirmo sede exacta + entrevista previa + DISC.
+        </div>
+      </div>
+
+      <iframe name="submitFrame" id="submitFrame" style="display:none;"></iframe>
+    </div>
+  </div>
+
+  <div class="section" id="incluye">
+    <h2>Lo que está dentro</h2>
+    <ul>
+      <li><strong>Entrevista previa 1:1</strong></li>
+      <li><strong>Psicométrico DISC + lectura aplicada</strong> a tu estilo de ejecución</li>
+      <li><strong>Intensivo presencial 4 horas</strong> (sábado 03/01/2026, 10:00–14:00)</li>
+      <li><strong>Material impreso</strong> + <strong>agenda personalizada</strong></li>
+      <li><strong>Seguimiento semanal por Zoom</strong> (todos los viernes del periodo)</li>
+      <li><strong>3 sesiones presenciales</strong> (1 mensual por 3 meses)</li>
+      <li><strong>Grupo privado de WhatsApp</strong></li>
+    </ul>
+    <p class="tiny">DISC es una herramienta de perfil conductual; no es diagnóstico clínico.</p>
+  </div>
+
+  <div class="section alt">
+    <h2>Política de cancelación y transferencias</h2>
+    <ul>
+      <li><strong>No hay cancelaciones ni reembolsos</strong> bajo ninguna circunstancia.</li>
+      <li>Puedes <strong>transferir tu lugar</strong> a otra persona sin costo adicional, hasta <strong>48</strong> horas antes del intensivo.</li>
+      <li>La transferencia es responsabilidad de la participante. Cualquier acuerdo económico se realiza <strong>entre ustedes</strong>.</li>
+      <li>Para personalización completa, solicita transferencia con al menos <strong>7</strong> días de anticipación.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Sobre Carolina González</h2>
+    <p>
+      Soy <strong>Carolina González</strong>, consultora y facilitadora en desarrollo humano, cultura organizacional y ejecución de objetivos.
+      Mi especialidad es convertir ideas, emociones y prioridades en un <strong>plan ejecutable</strong>, con seguimiento real.
+    </p>
+    <p>
+      He acompañado procesos de liderazgo y desempeño en empresas y proyectos en crecimiento, integrando herramientas como <strong>DISC</strong>.
+      Este programa nace de lo que he visto una y otra vez en emprendedoras: no falta talento, faltan <strong>prioridades claras</strong> y un <strong>ritmo sostenido</strong>.
+    </p>
+  </div>
+
+</div>
+
+<script>
+  // Form action set
+  const form = document.getElementById("leadForm");
+  const submitBtn = document.getElementById("submitBtn");
+  const msg = document.getElementById("msg");
+  const needsInvoice = document.getElementById("needsInvoice");
+  const invoiceFields = document.getElementById("invoiceFields");
+
+  // returnUrl set to your current page base
+  const baseUrl = window.location.origin + window.location.pathname;
+  document.getElementById("returnUrl").value = baseUrl;
+
+  // Set action to Apps Script endpoint
+  form.action = APPS_SCRIPT_WEBAPP_URL;
+
+  needsInvoice.addEventListener("change", () => {
+    invoiceFields.style.display = (needsInvoice.value === "Sí") ? "block" : "none";
+  });
+
+  function showMessage(text, type){
+    msg.style.display = "block";
+    msg.textContent = text;
+    msg.classList.remove("ok","err");
+    msg.classList.add(type === "ok" ? "ok" : "err");
+  }
+
+  // PayPal render only when status=registered
+  let paypalRendered = false;
+  function renderPaypalOnce(){
+    if (paypalRendered) return;
+    if (!window.paypal || !paypal.HostedButtons) return;
+    paypalRendered = true;
+    paypal.HostedButtons({ hostedButtonId: "C6XA5SYCVNL82" })
+      .render("#paypal-container-C6XA5SYCVNL82");
+  }
+
+  // WhatsApp link
+  const waNumber = "522299859993";
+  const waText = encodeURIComponent("Hola Carolina, ya pagué el anticipo del programa Reset 2026. Te envío mi comprobante aquí. ✅");
+  document.getElementById("waLink").href = `https://wa.me/${waNumber}?text=${waText}`;
+
+  // If redirected back by backend, show correct state
+  const params = new URLSearchParams(window.location.search);
+  const status = params.get("status");
+  const m = params.get("m");
+
+  const payBlock = document.getElementById("payBlock");
+  if (status === "registered") {
+    showMessage("Registro recibido ✅ Ahora paga tu anticipo para confirmar tu lugar.", "ok");
+    payBlock.style.display = "block";
+    renderPaypalOnce();
+  } else if (status === "waitlist") {
+    showMessage("Gracias 🙌 El cupo ya está lleno (3 lugares). Escríbeme por WhatsApp para lista de espera.", "err");
+  } else if (status === "already") {
+    showMessage("Ya tenemos tu registro en el sistema. Si ya pagaste, envíame tu comprobante por WhatsApp.", "ok");
+    payBlock.style.display = "block";
+    renderPaypalOnce();
+  } else if (status === "error") {
+    showMessage(m ? decodeURIComponent(m) : "Error al registrar. Intenta de nuevo.", "err");
+  }
+
+  // UX: disable button on submit (backend regresará por redirect)
+  form.addEventListener("submit", () => {
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Enviando…";
+  });
+</script>
+
+</body>
+</html>
